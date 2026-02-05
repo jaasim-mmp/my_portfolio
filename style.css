@@ -1065,3 +1065,103 @@ body {
         flex-direction: column; /* Stack Name & Email on mobile */
     }
 }
+
+
+
+/* --- MOBILE RESPONSIVENESS FIXES --- */
+/* Indha code-a style.css kadasila podunga */
+
+@media (max-width: 768px) {
+    
+    /* 1. Navbar Adjustments */
+    .nav {
+        padding: 15px 5%; /* Padding-a kuraippu */
+        flex-direction: column; /* Logo mela, links keela */
+        gap: 15px;
+        position: relative; /* Mobile-la fixed-a irundha maraikkum, so relative better */
+    }
+    
+    .nav ul {
+        gap: 15px; /* Links naduvula gap-a kuraippu */
+        flex-wrap: wrap; /* Links adhigama irundha adutha line-ku vara */
+        justify-content: center;
+    }
+
+    /* 2. Hero Section (Introduction) */
+    .hero-section {
+        padding-top: 40px; /* Nav position maathinadhal gap adjustment */
+        min-height: auto;  /* Full height theva illa mobile-la */
+        padding-bottom: 60px;
+        text-align: center; /* Ellame center-la irukka */
+    }
+
+    .hero-section h1 {
+        font-size: 36px; /* Font size-a paadhiya kuraikkurom */
+        line-height: 1.2;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+        padding: 0 20px; /* Side-la ottama irukka */
+    }
+
+    .hero-buttons-container {
+        flex-direction: column; /* Buttons onnu keela onnu */
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .hero-buttons-container button,
+    .hero-buttons-container a {
+        width: 100%; /* Button full width */
+        box-sizing: border-box;
+    }
+
+    .scroll-arrow {
+        display: none; /* Mobile-la scroll arrow theva illa, maraichidalam */
+    }
+
+    /* 3. General Section Padding */
+    /* Ellam section-kum padding-a kuraikkurom */
+    #about, #skills, #resume, #portfolio, #contact {
+        padding: 50px 5%; 
+    }
+
+    /* 4. About Section */
+    .about-content {
+        flex-direction: column; /* Text mela, Image keela */
+    }
+    
+    .about-image img {
+        max-height: 300px; /* Image romba perusa pogama irukka */
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* 5. Resume & Contact Grids */
+    .resume-content-columns, 
+    .contact-layout {
+        display: flex;
+        flex-direction: column; /* Side-by-side irukuradha onnu keela onnu aakkum */
+        gap: 40px;
+    }
+    
+    .form-row {
+        flex-direction: column; /* Name & Email onnu keela onnu */
+    }
+
+    /* 6. Portfolio Grid */
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Orey oru column dhaan */
+    }
+
+    /* 7. Skills */
+    .skills-grid {
+        flex-direction: column;
+    }
+    
+    .skill-detail-card {
+        max-width: 100%; /* Card full width */
+    }
+}
