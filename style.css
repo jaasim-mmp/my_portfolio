@@ -1,0 +1,1067 @@
+/* --- Add this at the VERY TOP of style.css --- */
+
+html {
+    scroll-behavior: smooth; /* Click panna smooth-a pogum */
+    scroll-padding-top: 100px; /* Header maraikkama irukka gap vidum */
+}
+
+/* ... mattha styles keela irukkattum ... */
+
+
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Unoda font import use panrom */
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    background-color: #ffffff; /* Must act like a solid wall */
+    
+    /* Box-shadow eduthuttu, idha podu */
+    border-bottom: 1px solid #eaeaea; /* Light grey thin line */
+    
+    /* Mattha styles apdiye irukkattum */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    box-sizing: border-box;
+}
+
+.nav > a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none; /* Underline remove panna */
+}
+
+.nav ul {
+    display: flex;      /* List items-a row-la kondu varum */
+    list-style: none;   /* Andha dots (bullets) remove pannidum */
+    gap: 30px;          /* Oru link-kum innoru link-kum naduvula gap */
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #555;        /* Grey color text */
+    font-weight: 500;
+    transition: color 0.3s ease; /* Hover pannum podhu smooth change */
+}
+
+.nav ul li a:hover {
+    color: #000; /* Mouse mela vecha black aagidum */
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    background-color: #ffffff; /* Must act like a solid wall */
+    
+    /* Box-shadow eduthuttu, idha podu */
+    border-bottom: 1px solid #eaeaea; /* Light grey thin line */
+    
+    /* Mattha styles apdiye irukkattum */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    box-sizing: border-box;
+}
+
+/* --- Hero Section Styling --- */
+
+.hero-section {
+    min-height: 100vh;      /* Screen uyarathukku (100%) spread aagum */
+    display: flex;
+    flex-direction: column; /* Items-a onnu keela onnu adukkum */
+    justify-content: center; /* Vertical-a CENTER pannum */
+    align-items: center;    /* Horizontal-a CENTER pannum */
+    padding-top: 80px;      /* Navbar maraikkaama irukka space */
+    box-sizing: border-box;
+    position: relative;     /* Arrow position correct-a irukka */
+}
+
+
+
+/* Main Heading ("Hi, I'm...") */
+.hero-section h1 {
+    font-size: 56px;        /* Nalla periya bold font */
+    font-weight: 600;       /* Konjam thick-a */
+    margin-bottom: 15px;    /* Keela konjam gap */
+    color: #000;            /* Pitch black color */
+    letter-spacing: -1px;   /* Text-a konjam tight-a azhaga kaatum */
+}
+
+/* Subheading ("Sales Advisor...") */
+/* first-of-type namma modhalla irukka 'p' tag-a mattum target pannum */
+.hero-section p:first-of-type {
+    font-size: 22px;
+    color: #666;            /* Grey color */
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Description Paragraph ("I help customers...") */
+/* nth-of-type(2) namma rendaavadhu irukka 'p' tag-a target pannum */
+/* Hero Section Description Text */
+.hero-section p:nth-of-type(2) {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 650px;       /* Text romba neelama pogama thadukkum */
+    margin: 0 auto 40px auto; /* Box-a screen center-la vekkum */
+    
+    /* Indha line dhaan text-a center pannum */
+    text-align: center;     
+}
+
+/* --- Buttons Container --- */
+.hero-buttons-container {
+    display: flex;          /* Buttons-a pakkathu pakkathula vekka */
+    justify-content: center; /* Center-la align panna */
+    gap: 20px;              /* Rendu button-kum naduvula gap */
+    margin-top: 10px;       /* Konjam extra gap mela */
+}
+
+/* Common Button Styles (Fix: Added 'a' tag support) */
+.hero-buttons-container button,
+.hero-buttons-container a {
+    display: inline-block;  /* Link-a irundhalum box madhiri kaatta */
+    padding: 14px 28px;     /* Button ulla space */
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;     /* Edges-a round aakkum */
+    cursor: pointer;        /* Mouse mela pona kai symbol varum */
+    transition: all 0.2s ease;
+    font-family: inherit;   /* Namma main font-ayey use pannum */
+    text-decoration: none;  /* Link underline remove panna */
+    text-align: center;     /* Text center-la irukka */
+}
+
+/* "View My Work" Button (Black) */
+/* first-child: first button or link */
+.hero-buttons-container button:first-child,
+.hero-buttons-container a:first-child {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    border: 1px solid #0a0a0a;
+}
+
+.hero-buttons-container button:first-child:hover,
+.hero-buttons-container a:first-child:hover {
+    background-color: #333; /* Hover panna konjam light black */
+    transform: translateY(-2px); /* Chinna animation */
+}
+
+/* "Get In Touch" Button (White) */
+/* last-child: second button or link */
+.hero-buttons-container button:last-child,
+.hero-buttons-container a:last-child {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #e5e5e5; /* Light grey border */
+}
+
+.hero-buttons-container button:last-child:hover,
+.hero-buttons-container a:last-child:hover {
+    border-color: #000;     /* Hover panna border dark aagum */
+    background-color: #f9f9f9;
+    transform: translateY(-2px); /* Chinna animation */
+}
+
+.scroll-arrow {
+    text-decoration: none;  /* Underline remove panna */
+    font-size: 32px;
+    color: #000;
+    margin-top: 40px;       /* Buttons-la irundhu gap */
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    
+    /* Arrow-va screen keela thalla */
+    position: absolute; 
+    bottom: 30px; 
+}
+
+/* Optional: Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+
+/* --- About Section --- */
+
+/* Update this existing class */
+#about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 5%;       /* Reduced from 80px to 20px */
+    box-sizing: border-box; /* Padding height-la serthu kanaku panna */
+    background-color: #f9f9f9; 
+    overflow: hidden;       /* Edhavadhu chinna overflow irundha maraikka */
+}
+
+/* Heading margin-a konjam kurai */
+#about h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;    /* Reduced from 60px to 30px */
+    margin-top: 0;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Container for Text + Image */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;              /* Reduced gap from 60px */
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;           /* Ensure it uses available height */
+}
+
+/* Text Section Styling */
+.about-text {
+    flex: 1;                /* Available space-la paadhi eduthukkum */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;       /* Lines naduvula nalla gap (padikka easy-a irukkum) */
+    color: #555;            /* Dark grey text */
+    margin-bottom: 20px;
+}
+
+/* Image Section Styling */
+/* Update this existing class */
+.about-image img {
+    width: auto;            /* Width-a auto panna, aspect ratio maintain aagum */
+    max-width: 100%;        /* Container-a vida perusa pogadhu */
+    max-height: 60vh;       /* Screen height-la 60% mattum dhaan edukkom */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.about-image img {
+    width: 100%;            /* Container full width */
+    max-width: 450px;       /* Image romba perusa pogaama thadukkum */
+    height: auto;
+    border-radius: 20px;    /* Screenshot-la irukkura madhiri 'curved corners' */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Light-a oru shadow (rich look-ku) */
+    object-fit: cover;
+}
+
+/* Mobile Responsiveness (Screen chinna aana, onnu keela onnu vara) */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Mobile-la Text mela, Image keela */
+        text-align: center;     /* Text-a center panna */
+    }
+    
+    .about-text p {
+        text-align: left;       /* Paragraphs left align-aave irukkattum */
+    }
+}
+
+/* --- SKILLS SECTION --- */
+
+/* Container Setup */
+.skills-overview {
+    padding-top: 0px; /* Zero gap from the container side */
+    
+    background-color: #f9f9f9; 
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+}
+
+/* WHITE CARD DESIGN */
+.skill-card {
+    background-color: #ffffff; /* Card color White */
+    border-radius: 20px;       /* Smooth corners */
+    padding: 60px 40px;        /* HEIGHT FIX: Padding jasthi panniyachu */
+    text-align: center;
+    flex: 1;                   /* Cards equal width eduthukkum */
+    min-width: 280px;
+    max-width: 350px;
+    
+    /* Subtle Border & Shadow */
+    border: 1px solid #eaeaea; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px); /* Hover panna mela varum */
+}
+
+/* GREY CIRCLE FOR ICONS */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #e6e6e6; /* Grey circle background */
+    border-radius: 50%;        /* Round shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px auto;  /* Center pannitu, keela gap vidum */
+}
+
+/* Icon Lines Style */
+.icon-circle svg {
+    width: 32px;
+    height: 32px;
+    stroke: #000;              /* Icon color black */
+}
+
+/* Typography inside Card */
+.skill-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.skill-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* --- SKILLS & EXPERTISE SECTION --- */
+
+#skills {
+    padding: 80px 5%;
+    background-color: #ffffff; /* White background */
+}
+
+/* Main Heading */
+#skills h2 {
+    text-align: center;
+    font-size: 48px;       /* Nalla periya heading */
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Subtitle Description */
+.section-subtitle {
+    text-align: center;
+    color: #666;           /* Grey text */
+    max-width: 700px;
+    margin: 0 auto 60px auto; /* Center alignment + Bottom spacing */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* GRID LAYOUT (Teacher Req: Flexbox) */
+.skills-grid {
+    display: flex;         /* Flexbox activate panrom */
+    justify-content: center;
+    gap: 30px;             /* Cards naduvula gap */
+    flex-wrap: wrap;       /* Mobile-la onnu keela onnu vara */
+}
+
+/* CARD DESIGN */
+.skill-detail-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5; /* Light grey border like screenshot */
+    border-radius: 24px;       /* Smooth rounded corners */
+    padding: 40px;             /* Spacious padding inside */
+    flex: 1;                   /* Cards equal width */
+    min-width: 320px;
+    max-width: 400px;          /* Romba perusa poga kudadhu */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02); /* Romba light shadow for depth */
+}
+
+/* Card Heading (e.g., Sales & Customer Service) */
+.skill-detail-card h3 {
+    margin-top: 0;
+    margin-bottom: 35px;   /* Gap below title */
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* LIST STYLING (Semantic HTML Styling) */
+.skill-list {
+    list-style: none;      /* Bullets remove panna */
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    margin-bottom: 30px;   /* Ovvoru skill-kum naduvula nalla gap */
+}
+
+/* Text Row (Name + Percentage) */
+.skill-info {
+    display: flex;
+    justify-content: space-between; /* Name left, % right */
+    margin-bottom: 12px;   /* Bar-kum text-kum gap */
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.skill-info span:last-child {
+    color: #888;           /* Percentage number konjam grey-a irukka */
+}
+
+/* --- PROGRESS BAR DESIGN (The Black Lines) --- */
+.progress-bar {
+    width: 100%;
+    height: 10px;          /* Bar thickness (Screenshot match) */
+    background-color: #f0f0f0; /* Light grey background track */
+    border-radius: 10px;   /* Pill shape */
+    overflow: hidden;      /* Fill veliya pogama irukka */
+}
+
+.progress-bar .fill {
+    height: 100%;
+    background-color: #000000; /* PITCH BLACK COLOR */
+    border-radius: 10px;       /* Fill-oda edges-um round-a irukkum */
+    display: block;
+}
+
+
+/* --- TECHNOLOGIES SECTION --- */
+
+.technologies-container {
+    margin-top: 80px;      /* Gap from the cards above */
+    text-align: center;    /* Align heading and tags to center */
+}
+
+/* Heading Style */
+.technologies-container h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 40px;   /* Gap between heading and tags */
+}
+
+/* Flex Container for Tags */
+.tech-tags {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    flex-wrap: wrap;         /* Allow tags to flow to next line */
+    gap: 15px;               /* Space between tags */
+    max-width: 900px;        /* Restrict width so it doesn't stretch too wide */
+    margin: 0 auto;          /* Center the block itself */
+}
+
+/* Individual Tag Design (The Pills) */
+.tech-tags span {
+    background-color: #f2f4f6; /* Light Grey Background (Screenshot match) */
+    color: #000;               /* Black Text */
+    padding: 12px 24px;        /* Spacing inside the tag */
+    border-radius: 8px;        /* Smooth rounded corners */
+    font-size: 16px;
+    font-weight: 500;          /* Medium boldness */
+    transition: background-color 0.2s ease; /* Hover effect ku */
+}
+
+/* Optional: Hover Effect */
+.tech-tags span:hover {
+    background-color: #e0e0e0; /* Darker grey on hover */
+    cursor: default;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tech-tags {
+        gap: 10px;
+    }
+    .tech-tags span {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* --- RESUME SECTION --- */
+#resume {
+    padding: 80px 5%;
+    background-color: #f9f9f9;
+}
+
+/* Top Row: Title Left, Button Right */
+.resume-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#resume h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #000;
+}
+
+/* --- GRID LAYOUT (The Main Wrapper) --- */
+.resume-content-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two Equal Columns */
+    gap: 40px;
+    align-items: start;
+}
+
+/* Column Headers (Icon + Title) */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.icon-box-small {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-header h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* --- CARD DESIGN (<article>) --- */
+#resume article {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+}
+
+/* Card Header: Title Left, Date Right */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-header h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #000;
+}
+
+.card-header .date {
+    font-size: 14px;
+    color: #888;
+    white-space: nowrap;
+}
+
+/* Institution Name */
+.institution, .institution-link {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+/* Description Text */
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* List Styling (Work Experience) */
+#resume article ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+#resume article ul li {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* --- CERTIFICATIONS SECTION --- */
+.certifications {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.certifications h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.certifications ul {
+    list-style: none; /* No bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.certifications ul li {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 0;
+}
+
+.certifications ul:last-child li {
+    border-bottom: none; /* Remove line for last item */
+}
+
+/* Row for Cert Name and Date */
+.cert-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cert-row h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.cert-row time {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .resume-content-columns {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+}
+
+
+/* --- PORTFOLIO SECTION --- */
+#portfolio {
+    padding: 80px 5%;
+    background-color: #ffffff;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#portfolio h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+#portfolio p {
+    color: #666;
+    font-size: 18px;
+}
+
+/* GRID LAYOUT */
+.portfolio-grid {
+    display: grid;
+    /* This creates the 3-column layout automatically */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CARD DESIGN */
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    overflow: hidden; /* Ensures image corners follow border radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stacks Image -> Text -> Tags */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* MEDIA (Video/Image) WRAPPER */
+.media-container {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Standard YouTube ratio */
+    background-color: #000;
+    position: relative;
+}
+
+.media-container iframe,
+.media-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area nicely */
+    border: none;
+    display: block;
+}
+
+/* CONTENT INSIDE CARD */
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pushes content to fill height */
+}
+
+.project-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #000;
+}
+
+.project-card .description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Makes tags align at bottom evenly */
+}
+
+/* TAGS STYLING (Pills) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    background-color: #f3f4f6; /* Light grey bg */
+    color: #333;
+    padding: 6px 14px;
+    border-radius: 20px;       /* Pill shape */
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #e5e5e5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
+/* --- Video Thumbnail Styling --- */
+
+/* Make the link block-level to fill the container */
+/* --- HOVER EFFECT STYLES --- */
+
+.video-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000000; /* Black background behind image */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Image Styling */
+.video-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; /* Fully visible initially */
+    transition: opacity 0.3s ease, transform 0.4s ease;
+    display: block;
+}
+
+/* The "Watch Video" Button */
+.watch-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Start slightly lower for the slide-up effect */
+    transform: translate(-50%, -40%); 
+    
+    background-color: #ffffff;
+    color: #000000;
+    
+    /* Shape & Spacing */
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    
+    /* Font Styles */
+    font-size: 14px;
+    font-weight: 600;
+    
+    /* Hidden Initially */
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Pop-out shadow */
+}
+
+/* --- HOVER ACTIONS --- */
+
+/* 1. Darken the Image */
+.video-link:hover img {
+    opacity: 0.6;        /* Image fades to 60%, showing black bg */
+    transform: scale(1.05); /* Slight zoom in */
+}
+
+/* 2. Show the Button */
+.video-link:hover .watch-btn {
+    opacity: 1;          /* Make visible */
+    transform: translate(-50%, -50%); /* Slide up to perfect center */
+}
+
+/* --- CONTACT SECTION --- */
+#contact {
+    padding: 80px 5%;
+    background-color: #f9f9f9; /* Light grey section background */
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#contact h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+#contact p {
+    color: #666;
+    font-size: 18px;
+}
+
+/* LAYOUT: GRID (Left Form, Right Info) */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* Form takes 60%, Info takes 40% */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* SHARED CARD STYLES */
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    border: 1px solid #eaeaea;
+}
+
+.contact-card h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* --- FORM STYLING --- */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Name & Email side-by-side */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* INPUT DESIGN (Grey bg, no border) */
+.form-group input, 
+.form-group textarea {
+    background-color: #f3f4f6; /* Screenshot grey */
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+/* Input Focus Effect */
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: 2px solid #000;
+    background-color: #fff;
+}
+
+/* SUBMIT BUTTON */
+.styled-form button {
+    background-color: #000; /* Black button */
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.styled-form button:hover {
+    background-color: #333;
+}
+
+/* --- INFO COLUMN STYLES --- */
+.info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Info List Items */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Text Details */
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.details .label {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+.details a, 
+.details span {
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* --- SOCIAL LINKS (Follow Me) --- */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.social-links a:hover {
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr; /* Stack one below other */
+    }
+    
+    .form-row {
+        flex-direction: column; /* Stack Name & Email on mobile */
+    }
+}
