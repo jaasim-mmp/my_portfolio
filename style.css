@@ -1068,100 +1068,97 @@ body {
 
 
 
-/* --- MOBILE RESPONSIVENESS FIXES --- */
-/* Indha code-a style.css kadasila podunga */
-
+/* --- MOBILE RESPONSIVENESS FIXES (UPDATED) --- */
 @media (max-width: 768px) {
     
     /* 1. Navbar Adjustments */
     .nav {
-        padding: 15px 5%; /* Padding-a kuraippu */
-        flex-direction: column; /* Logo mela, links keela */
+        padding: 15px 5%;
+        flex-direction: column;
         gap: 15px;
-        position: relative; /* Mobile-la fixed-a irundha maraikkum, so relative better */
+        position: relative;
     }
     
     .nav ul {
-        gap: 15px; /* Links naduvula gap-a kuraippu */
-        flex-wrap: wrap; /* Links adhigama irundha adutha line-ku vara */
+        gap: 15px;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
-    /* 2. Hero Section (Introduction) */
+    /* 2. Hero Section */
     .hero-section {
-        padding-top: 40px; /* Nav position maathinadhal gap adjustment */
-        min-height: auto;  /* Full height theva illa mobile-la */
+        padding-top: 40px;
         padding-bottom: 60px;
-        text-align: center; /* Ellame center-la irukka */
+        text-align: center;
     }
 
     .hero-section h1 {
-        font-size: 36px; /* Font size-a paadhiya kuraikkurom */
+        font-size: 36px;
         line-height: 1.2;
     }
 
     .hero-section p {
         font-size: 16px;
-        padding: 0 20px; /* Side-la ottama irukka */
+        padding: 0 10px;
     }
 
     .hero-buttons-container {
-        flex-direction: column; /* Buttons onnu keela onnu */
+        flex-direction: column;
         width: 100%;
         padding: 0 20px;
         box-sizing: border-box;
     }
     
-    .hero-buttons-container button,
-    .hero-buttons-container a {
-        width: 100%; /* Button full width */
-        box-sizing: border-box;
-    }
-
     .scroll-arrow {
-        display: none; /* Mobile-la scroll arrow theva illa, maraichidalam */
+        display: none;
     }
 
-    /* 3. General Section Padding */
-    /* Ellam section-kum padding-a kuraikkurom */
+    /* 3. General Padding */
     #about, #skills, #resume, #portfolio, #contact {
         padding: 50px 5%; 
     }
 
-    /* 4. About Section */
+    /* 4. About Image Fix (NO CROPPING) */
     .about-content {
-        flex-direction: column; /* Text mela, Image keela */
-    }
-    
-    .about-image img {
-        max-height: 300px; /* Image romba perusa pogama irukka */
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    /* 5. Resume & Contact Grids */
-    .resume-content-columns, 
-    .contact-layout {
-        display: flex;
-        flex-direction: column; /* Side-by-side irukuradha onnu keela onnu aakkum */
-        gap: 40px;
-    }
-    
-    .form-row {
-        flex-direction: column; /* Name & Email onnu keela onnu */
-    }
-
-    /* 6. Portfolio Grid */
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Orey oru column dhaan */
-    }
-
-    /* 7. Skills */
-    .skills-grid {
         flex-direction: column;
     }
     
-    .skill-detail-card {
-        max-width: 100%; /* Card full width */
+    .about-image img {
+        width: 100%;          /* Full width eduthukkum */
+        height: auto;         /* Height-a natural-a irukka vidum (No stretch) */
+        max-height: none;     /* Limit-a remove panrom */
+        object-fit: contain;  /* Photo cut aagama full-a theriyum */
+        margin-top: 30px;
+        border-radius: 12px;
+    }
+
+    /* 5. Resume & Skills */
+    .resume-content-columns, 
+    .skills-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* 6. Contact Section Fix (CENTERING) */
+    .contact-layout {
+        display: flex;
+        flex-direction: column; /* Onnu keela onnu */
+        align-items: center;    /* Center alignment fix! */
+        gap: 40px;
+        width: 100%;            /* Container full width */
+    }
+
+    /* Form & Info Cards Full Width */
+    .contact-layout > div, 
+    .contact-card {
+        width: 100%;            /* Screen full width edukkum */
+        max-width: 100%;
+        box-sizing: border-box; /* Padding serthu kanakku pannum */
+        margin: 0;              /* Extra margin remove */
+    }
+    
+    .form-row {
+        flex-direction: column;
     }
 }
